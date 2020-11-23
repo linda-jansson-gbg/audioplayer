@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eeeeee;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.player-container {
+    background-color: #fff;
+    width: 275px;
+    height: 422px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 40px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.controls svg,
+#volume {
+    cursor: pointer;
+    color: #1c1b44;
+}
+
+.title {
+    color: #1c1b44;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.artist {
+    color: #777;
+    font-weight: 400;
+    line-height: 1em;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 0.5em 1em;
+}
+
+.controls svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #1c1b44;
+}
+
+.hide {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.progress-bar {
+    height: 6px;
+    width: 100%;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.progress {
+    height: 2px;
+    width: 0;
+    background-color: #1c1b44;
+}
+
+.credit {
+    padding-top: 2em;
+}
+
+.volumeslider-container {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: 6em;
+    transform: translate(11.5em, -8em);
+}
+
+#volumeslider {
+    transform: rotate(-90deg);
+}
+
+#volumeslider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    /* Full-width */
+    height: 8px;
+    /* Specified height */
+    background: #f0f0f0;
+    background: linear-gradient(90deg, #1c1b44, #1c1b44 100%, #f0f0f0 100%, #f0f0f0 50%);
+    /* Grey background */
+    outline: none;
+}
+
+#volumeslider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #1c1b44;
+    cursor: pointer;
+    border: 3px solid #fff;
+    margin-left: 2px;
+}
+
+#volumeslider::-webkit-slider-thumb::after {
+    background: #1c1b44;
+}
+
+#volumeslider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: #1c1b44;
+    cursor: pointer;
+}
